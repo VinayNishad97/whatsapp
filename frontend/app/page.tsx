@@ -14,5 +14,3 @@ export default function Home() {
         </>
     );
 }
-
-const newt = 10;
