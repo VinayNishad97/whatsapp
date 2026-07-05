@@ -43,7 +43,7 @@ async fn handle_socket(socket: WebSocket, state: Arc<AppState>) {
     let mut send_task = tokio::spawn(async move {
         while let Ok(msg) = rx.recv().await {
             if sender.send(Message::Text(msg.into())).await.is_err() {
-                break; // Disconnect if sending fails
+                break; 
             }
         }
     });
